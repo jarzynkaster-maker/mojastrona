@@ -80,12 +80,13 @@
 
   /* ---------- stats ---------- */
   .stats{background:var(--green);color:var(--cream)}
-  .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:54px 0}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:54px 0}
   .stat{padding:0 8px}
-  .stat .n{font-family:var(--serif);font-size:clamp(44px,5vw,64px);font-weight:600;line-height:1;color:var(--taupe-soft)}
+  .stat .n{font-family:var(--serif);font-size:clamp(40px,4.2vw,58px);font-weight:600;line-height:1;color:var(--taupe-soft)}
   .stat .l{margin-top:10px;font-size:15px;font-weight:600;color:rgba(242,239,232,.82);max-width:24ch}
   .stat+.stat{border-left:1px solid rgba(242,239,232,.16)}
-  @media(max-width:680px){.stats-grid{grid-template-columns:1fr;gap:0}.stat{padding:24px 0}.stat+.stat{border-left:none;border-top:1px solid rgba(242,239,232,.16)}}
+  @media(max-width:860px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:36px 24px}.stat+.stat{border-left:none}.stat:nth-child(even){border-left:1px solid rgba(242,239,232,.16)}}
+  @media(max-width:680px){.stats-grid{grid-template-columns:1fr;gap:0}.stat{padding:24px 0}.stat+.stat{border-left:none;border-top:1px solid rgba(242,239,232,.16)}.stat:nth-child(even){border-left:none}}
 
   /* ---------- showcase ---------- */
   .showcase{position:relative;min-height:520px;display:flex;align-items:center;overflow:hidden;background:var(--green-deep)}
@@ -176,6 +177,92 @@
 
   /* placeholder hint */
   .ph{border-bottom:1px dashed rgba(176,144,92,.5)}
+
+  /* ================= MOBILE — kompaktowy układ ================= */
+  @media(max-width:600px){
+    .wrap{padding:0 20px}
+    .nav{height:60px}
+    .mono{width:34px;height:34px;font-size:16px}
+    .brand small{font-size:10px;letter-spacing:.14em}
+    header .btn{padding:10px 15px;font-size:13px}
+    header .btn .icon{width:16px;height:16px}
+
+    /* hero */
+    .hero-grid{gap:30px;padding:32px 0 44px}
+    .hero h1{font-size:38px;line-height:1.0;margin-top:12px}
+    .hero p.lead{margin-top:16px;font-size:15.5px}
+    .hero-cta{gap:10px;margin-top:24px}
+    .hero-cta .btn{padding:12px 18px;font-size:13.5px}
+    .phone-inline{margin-top:20px;font-size:16px}
+    .eyebrow{font-size:12px;letter-spacing:.18em}
+    .partner{margin-bottom:16px;padding:7px 13px 7px 12px}
+    .partner .pname{font-size:13px}
+    .portrait{max-width:none;margin:0 auto;width:100%}
+    .portrait .frame img{aspect-ratio:4/3}
+    .portrait .badge{left:14px;bottom:14px;padding:12px 16px}
+    .portrait .badge .n{font-size:24px}
+    .portrait .tag{right:14px;top:14px;font-size:11px;padding:8px 13px}
+
+    /* stats */
+    .stats-grid{padding:34px 0}
+    .stat{padding:18px 0}
+    .stat .n{font-size:42px}
+    .stat .l{font-size:13.5px;margin-top:6px}
+
+    /* showcase */
+    .showcase{min-height:340px}
+    .showcase .sc-content{padding:48px 20px}
+    .showcase h2{font-size:28px;margin:12px 0 22px}
+    .showcase .btn{padding:12px 18px;font-size:13.5px}
+
+    /* generic sections */
+    section.block{padding:52px 0}
+    .sec-head{margin-bottom:30px}
+    .sec-head h2{font-size:27px}
+
+    /* about */
+    .about-grid{gap:26px}
+    .about-photo{max-width:none}
+    .about-body h2{font-size:26px !important;margin:10px 0 16px !important}
+    .about-body p{font-size:15px}
+    .about-body p+p{margin-top:14px}
+    .about-sign{margin-top:20px;font-size:22px}
+    .quote-mark{font-size:50px;height:26px}
+
+    /* services */
+    .svc-grid{gap:14px}
+    .svc{padding:24px}
+    .svc h3{font-size:18px;margin:16px 0 7px}
+    .svc p{font-size:14.5px}
+
+    /* process */
+    .steps{gap:26px}
+    .step h4{font-size:16px}
+    .step p{font-size:14px}
+
+    /* reviews */
+    .rev-grid{gap:14px}
+    .rev{padding:24px}
+    .rev p{font-size:15px;margin:14px 0 18px}
+
+    /* contact */
+    .contact h2{font-size:28px}
+    .contact .lead{font-size:15.5px;margin-top:14px}
+    .cdetail{padding:14px 0;gap:13px}
+    .cdetail .ic{width:40px;height:40px}
+    .cdetail .v{font-size:16.5px}
+    .form{padding:24px}
+    .form h3{font-size:18px}
+    .field input,.field textarea{font-size:16px}
+
+    /* footer */
+    .foot-in{padding:30px 0;gap:18px}
+  }
+  @media(max-width:380px){
+    .hero h1{font-size:33px}
+    .stat .n{font-size:38px}
+    .sec-head h2,.contact h2,.showcase h2{font-size:25px}
+  }
 </style>
 </head>
 <body>
@@ -186,7 +273,7 @@
       <div class="mono">MJ</div>
       <div>
         <div>Marcin Jarzyna</div>
-        <small>NIERUCHOMOŚCI</small>
+        <small data-comment-anchor="36ad277fee-small">NIERUCHOMOŚCI</small>
       </div>
     </div>
     <nav class="nav-links">
@@ -210,7 +297,7 @@
       <a class="partner" href="https://www.theestate.pl" target="_blank" rel="noopener"><span class="plabel">Partner</span><span class="pdot"></span><span class="pname">The Estate Warsaw</span></a>
       <span class="eyebrow">Agent nieruchomości · Warszawa</span>
       <h1>Twoja nieruchomość<br>w <span class="light">skutecznych</span><br>rękach.</h1>
-      <p class="lead">Od ponad 6 lat doradzam przy sprzedaży i zakupie nieruchomości, łącząc rynkową skuteczność z indywidualnym podejściem do każdego klienta. Ponad 100 sfinalizowanych transakcji i pełna transparentność na każdym etapie — od pierwszego spotkania po akt notarialny.</p>
+      <p class="lead">Od kilku lat doradzam przy sprzedaży i zakupie nieruchomości, łącząc rynkową skuteczność z indywidualnym podejściem do każdego klienta. Ponad 100 sfinalizowanych transakcji i pełna transparentność na każdym etapie — od pierwszego spotkania po akt notarialny.</p>
       <div class="license"><svg class="icon" viewBox="0 0 24 24" style="width:18px;height:18px"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg><span>Licencjonowany pośrednik PFRN · <b>Licencja nr 29419</b></span></div>
       <div class="hero-cta">
         <a href="tel:+48886395806" class="btn btn-primary">
@@ -233,6 +320,7 @@
   <div class="wrap stats-grid">
     <div class="stat"><div class="n">6+</div><div class="l">lat doświadczenia na rynku nieruchomości</div></div>
     <div class="stat"><div class="n">100+</div><div class="l">przeprowadzonych transakcji sprzedaży, kupna i najmów</div></div>
+    <div class="stat"><div class="n">98%</div><div class="l">średnio uzyskanej ceny względem ceny ofertowej</div></div>
     <div class="stat"><div class="n">~32 dni</div><div class="l">średni czas sprzedaży nieruchomości z mojej oferty</div></div>
   </div>
 </section>
@@ -244,9 +332,9 @@
     <div class="about-body">
       <span class="quote-mark">“</span>
       <span class="eyebrow">O mnie</span>
-      <h2 class="serif" style="font-size:clamp(30px,3.6vw,44px);font-weight:600;line-height:1.05;margin:12px 0 22px">Nieruchomość to często decyzja życia. Traktuję ją tak poważnie, jak Ty.</h2>
-      <p>Specjalizuję się w sprzedaży i zakupie mieszkań, domów oraz działek — głównie na rynku warszawskim i okolicach, ale również na Mazurach i w Trójmieście. Przez ponad sześć lat doprowadziłem do finału ponad 100 transakcji, za każdym razem dbając o najwyższą wartość i pełne bezpieczeństwo moich klientów.</p>
-      <p>W pracy stawiam na uczciwość, stały kontakt i konkretne działanie. Łączę profesjonalną prezentację oferty, skuteczny marketing i twarde negocjacje, by uzyskać dla Ciebie najlepsze warunki — a przy tym dbam, byś na każdym etapie czuł się pewnie i wiedział, co dzieje się z Twoją sprawą.</p>
+      <h2 class="serif" style="font-size:clamp(30px,3.6vw,44px);font-weight:600;line-height:1.05;margin:12px 0 22px">Pomagam ludziom otworzyć nowy rozdział.</h2>
+      <p>Specjalizuję się w sprzedaży i zakupie mieszkań, domów oraz działek — głównie na rynku warszawskim i okolicach, ale również na Mazurach i w Trójmieście. Przez ponad sześć lat doprowadziłem do finału ponad 100 transakcji, za każdym razem dbając o najwyższą jakość usług i pełne bezpieczeństwo moich klientów.</p>
+      <p>W pracy stawiam na uczciwość, stały kontakt i konkretne działanie. Dbam o to, byś na każdym etapie czuł się pewnie i miał pełną jasność co do przebiegu swojej sprawy.</p>
       <div class="about-sign">— Marcin Jarzyna</div>
     </div>
   </div>
@@ -339,14 +427,15 @@
           <span class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
           <span><span class="k">Telefon</span><span class="v">+48 886 395 806</span></span>
         </a>
-        <a href="/cdn-cgi/l/email-protection#4c262d3e3635222d0c382429293f382d3829623c20" class="cdetail" style="cursor:pointer">
-          <span class="ic"><svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
-          <span><span class="k">E-mail</span><span class="v"><span class="__cf_email__" data-cfemail="7812190a02011619380c101d1d0b0c190c1d560814">[email&#160;protected]</span></span></span>
-        </a>
         <div class="cdetail">
           <span class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
-          <span><span class="k">Obszar działania</span><span class="v">Warszawa i okolice oraz cała Polska</span></span>
+          <span><span class="k">Obszar działania</span><span class="v">Warszawa i okolice
+</span></span>
         </div>
+        <a href="https://maps.google.com/?q=Mokotowska+3%2F12+00-640+Warszawa" target="_blank" rel="noopener" class="cdetail" style="cursor:pointer">
+          <span class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-5h6v5"/></svg></span>
+          <span><span class="k">Adres biura</span><span class="v">Mokotowska 3/12, 00-640 Warszawa</span></span>
+        </a>
       </div>
     </div>
 
@@ -386,7 +475,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   (function(){
     var f = document.getElementById('leadForm');
     if(!f) return;
