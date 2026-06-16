@@ -52,7 +52,7 @@
 
   /* ---------- hero ---------- */
   .hero{position:relative;overflow:hidden}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:72px 0 88px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-top:72px;padding-bottom:88px}
   .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(46px,6vw,82px);line-height:.98;letter-spacing:-.01em;margin:18px 0 0}
   .hero h1 .light{font-style:italic;font-weight:400;color:var(--green)}
   .hero .role{margin-top:14px;font-size:clamp(17px,2vw,21px);font-weight:600;color:var(--green)}
@@ -76,11 +76,11 @@
   .portrait .badge .n{font-family:var(--serif);font-size:30px;font-weight:600;line-height:1}
   .portrait .badge .l{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sage);margin-top:4px}
   .portrait .tag{position:absolute;right:-14px;top:28px;background:var(--green);color:var(--cream);font-size:12.5px;font-weight:700;letter-spacing:.08em;padding:10px 16px;border-radius:100px;text-transform:uppercase}
-  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:40px;padding:48px 0 64px}.portrait{max-width:420px}}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:40px;padding-top:48px;padding-bottom:64px}.portrait{max-width:420px}}
 
   /* ---------- stats ---------- */
   .stats{background:var(--green);color:var(--cream)}
-  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:54px 0}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:54px;padding-bottom:54px}
   .stat{padding:0 8px}
   .stat .n{font-family:var(--serif);font-size:clamp(40px,4.2vw,58px);font-weight:600;line-height:1;color:var(--taupe-soft)}
   .stat .l{margin-top:10px;font-size:15px;font-weight:600;color:rgba(242,239,232,.82);max-width:24ch}
@@ -167,7 +167,7 @@
 
   /* ---------- footer ---------- */
   footer.foot{background:var(--ink);color:var(--cream)}
-  .foot-in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:40px 0;flex-wrap:wrap}
+  .foot-in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:40px;padding-bottom:40px;flex-wrap:wrap}
   .foot .brand small{color:var(--sage)}
   .foot .socials{display:flex;gap:12px}
   .foot .socials a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(242,239,232,.22);display:grid;place-items:center;transition:background .2s,color .2s}
@@ -189,7 +189,7 @@
     header .btn .icon{width:15px;height:15px}
 
     /* hero */
-    .hero-grid{gap:26px;padding:26px 0 40px}
+    .hero-grid{gap:26px;padding-top:26px;padding-bottom:40px}
     .hero h1{font-size:31px;line-height:1.04;margin-top:10px}
     .hero .role{font-size:16px;margin-top:10px}
     .hero p.lead{margin-top:14px;font-size:14.5px;line-height:1.55}
@@ -207,8 +207,8 @@
     .portrait .badge .l{font-size:10px}
     .portrait .tag{right:12px;top:12px;font-size:10.5px;padding:7px 12px}
 
-    /* stats — z bocznym marginesem i wyśrodkowane */
-    .stats-grid{padding:14px 22px}
+    /* stats — wyśrodkowane (boczny margines z .wrap) */
+    .stats-grid{padding-top:14px;padding-bottom:14px}
     .stat{padding:22px 0;text-align:center;max-width:30ch;margin:0 auto}
     .stat .n{font-size:34px}
     .stat .l{font-size:13px;margin-top:5px;max-width:none;margin-left:auto;margin-right:auto}
@@ -266,7 +266,7 @@
     .form .btn-primary{padding:13px}
 
     /* footer */
-    .foot-in{padding:28px 0;gap:16px}
+    .foot-in{padding-top:28px;padding-bottom:28px;gap:16px}
     .foot .copy{font-size:11.5px}
   }
   @media(max-width:380px){
